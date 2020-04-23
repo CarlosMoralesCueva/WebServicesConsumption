@@ -12,7 +12,7 @@
 1. Iniciar Unity Hub y crear un nuevo programa 3D llamado WebServicesConsumption
 2. Ir a File, Build Settings ...
 3. Seleccionar Android, dar clic en Switch Platform
-4. En la pestaña Game cambiar la resolución de pestaña a 
+4. En la pestaña Game cambiar la resolución de pestaña a 1280x720 Portrait
 5. Dar clic derecho en la escena, UI, Dropdown
 6. Darle nombre: Server_list, posicionarlo: Pos Y: 350, Width: 160, Height: 30, Scale X: 4, Y: 4; en "options" ingresar el siguiente listado: 
 * LAN
