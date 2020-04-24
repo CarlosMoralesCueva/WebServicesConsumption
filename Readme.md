@@ -57,7 +57,6 @@ using UnityEngine;
 using System.Net;
 using System;
 using System.IO;
-using Assets.Scripts;
 using UnityEngine.UI;
 
 public class ServerController : MonoBehaviour
