@@ -12,9 +12,9 @@
 1. Iniciar Unity Hub y crear un nuevo programa 3D llamado WebServicesConsumption
 2. Ir a File, Build Settings ...
 3. Seleccionar Android, dar clic en Switch Platform
-4. En la pestaña Game cambiar la resolución de pestaña a 
-7. Dar clic derecho en la escena, UI, Dropdown
-8. Darle nombre: Server_list, posicionarlo: Pos Y: 350, Width: 160, Height: 30, Scale X: 4, Y: 4; en "options" ingresar el siguiente listado: 
+4. En la pestaña Game cambiar la resolución de pestaña a 1280x720 Portrait
+5. Dar clic derecho en la escena, UI, Dropdown
+6. Darle nombre: Server_list, posicionarlo: Pos Y: 350, Width: 160, Height: 30, Scale X: 4, Y: 4; en "options" ingresar el siguiente listado: 
 * LAN
 * LAS
 * Brasil
@@ -26,39 +26,37 @@
 * Oceanía
 * Rusia
 * Turquía
-9. Dar clic derecho en la escena, UI, Button
-10. Darle nombre: Obtain_information, posicionarla: Pos Y: 230, Width: 160, Height: 30, Scale X: 4, Y: 4; como texto colocar: Obtener información
-11. Ingresar 6 cuadros de texto dando clic derecho en la escena, UI, Text y configurar cada cuadro de la siguiente manera:
-* Nombre: Game, Pos X: -200, Pos Y: -350, Width: 250, Height: 75, Texto: Game 
-* Nombre: Store, Pos X: -25, Pos Y: -350, Width: 250, Height: 75, Texto: Store
-* Nombre: WebSite, Pos X: 125, Pos Y: -350, Width: 250, Height: 75, Texto: WebSite
-* Nombre: Client, Pos X: 325, Pos Y: -350, Width: 250, Height: 75, Texto: Client
-* Nombre: Server, Pos X: -100, Pos Y: 120, Width: 500, Height: 75, Texto: (quitar texto)
-* Nombre: Slug, Pos X: 380, Pos Y: 120, Width: 250, Height: 75, Texto: (quitar texto)
-12. En la parte inferior, en Assets dar clic derecho y crear la carpeta Images
-13. Copiar las 10 imágenes de los servidores a esta carpeta
-14. Ingresar 10 imágenes dando clic derecho en la escena, UI, Raw Image y configurar de la siguiente manera cada imagen:
-* Nombre: LAN_image
-* Nombre: LAS_image
-* Nombre: BR_image
-* Nombre: NA_image
-* Nombre: JP_image
-* Nombre: EUW_image
-* Nombre: EUN_image
-* Nombre: OC_image
-* Nombre: RU_image
-* Nombre: TR_image
-15. Deshabilitar todas las imágenes y en el recuadro de Texture arrastrar la imagen correspondiente
-12. En la parte inferior, en Assets dar clic derecho y crear la carpeta Scripts
-13. En esta carpeta crear un script de C# con el nombre de ServerController
-14. Copiar el siguiente código en el script
-
+7. Dar clic derecho en la escena, UI, Button
+8. Darle nombre: Obtain_information, posicionarla: Pos Y: 230, Width: 160, Height: 30, Scale X: 4, Y: 4; como texto colocar: Obtener información
+9. Ingresar 6 cuadros de texto dando clic derecho en la escena, UI, Text y configurar cada cuadro de la siguiente manera:
+* Nombre: Game, Pos X: -200, Pos Y: -350, Width: 250, Height: 75, Texto: Game, Font Size: 48 
+* Nombre: Store, Pos X: -25, Pos Y: -350, Width: 250, Height: 75, Texto: Store, Font Size: 48 
+* Nombre: WebSite, Pos X: 125, Pos Y: -350, Width: 250, Height: 75, Texto: WebSite, Font Size: 48 
+* Nombre: Client, Pos X: 325, Pos Y: -350, Width: 250, Height: 75, Texto: Client, Font Size: 48 
+* Nombre: Server, Pos X: -100, Pos Y: 120, Width: 500, Height: 75, Texto: (quitar texto), Font Size: 48 
+* Nombre: Slug, Pos X: 380, Pos Y: 120, Width: 250, Height: 75, Texto: (quitar texto), Font Size: 48 
+10. En la parte inferior, en Assets dar clic derecho y crear la carpeta Images
+11. Copiar las 10 imágenes de los servidores a esta carpeta
+12. Ingresar 10 imágenes dando clic derecho en la escena, UI, Raw Image y configurar de la siguiente manera cada imagen:
+* Nombre: LAN_image: LA1
+* Nombre: LAS_image: LA2
+* Nombre: BR_image: BR1
+* Nombre: NA_image: NA1
+* Nombre: JP_image: JP1
+* Nombre: EUW_image: EUW1
+* Nombre: EUN_image: EUN1
+* Nombre: OC_image: OC1
+* Nombre: RU_image: RU1
+* Nombre: TR_image: TR1
+13. Deshabilitar todas las imágenes y en el recuadro de Texture arrastrar la imagen correspondiente
+14. En la parte inferior, en Assets dar clic derecho y crear la carpeta Scripts
+15. En esta carpeta crear un script de C# con el nombre de ServerController
+16. Copiar el siguiente código en el script
 ```c#
 using UnityEngine;
 using System.Net;
 using System;
 using System.IO;
-using Assets.Scripts;
 using UnityEngine.UI;
 
 public class ServerController : MonoBehaviour
@@ -192,9 +190,8 @@ public class ServerController : MonoBehaviour
     }
 }
 ```
-
-15. En la carpeta Scripts crear una clase de C# con el nombre de ServerInfo
-14. Copiar el siguiente código en el script
+17. En la carpeta Scripts crear una clase de C# con el nombre de ServerInfo
+18. Copiar el siguiente código en el script
 ```c#
 using System;
 using System.Collections.Generic;
@@ -270,9 +267,8 @@ namespace Assets.Scripts
     }
 }
 ```
-
-15. Una vez copiado el código añadir el script ServerController al botón Obtain_information
-16. Asociar la función GetServersInfo a la funcionalidad On Click() del botón seleccionado
-17. Asociar cada elemento de la interfaz gráfica a su correspondiente elemento del script 
-17. Dar clic  en "Add Open Scenes" y Build
-18. Probar
+19. Una vez copiado el código añadir el script ServerController al botón Obtain_information
+20. Asociar la función GetServersInfo a la funcionalidad On Click() del botón seleccionado
+21. Asociar cada elemento de la interfaz gráfica a su correspondiente elemento del script 
+22. Dar clic  en "Add Open Scenes" y Build
+23. Probar
