@@ -7,7 +7,7 @@ using Assets.Scripts;
 
 public class ServerController : MonoBehaviour
 {
-    private const string API_KEY = "";
+    private const string API_KEY = TuLlaveDeDesarrolladorVaAqui;
     public Dropdown serverList;
     public Text game;
     public Text store;
